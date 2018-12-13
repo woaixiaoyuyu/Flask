@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
  
  
-@app.route('/login', methods=['GET', 'POST'])  # @app.route()是thedecorator是装饰hello_world()功能
+@app.route('/login', methods=['GET', 'POST'])  # @app.route()是thedecorator是装饰器功能
 def login():
     if request.method == 'GET':
         return render_template('login.html')
