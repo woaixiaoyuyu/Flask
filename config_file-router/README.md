@@ -4,4 +4,5 @@ work hard and study Flask.<br><br>
 Different ways about creating config file
 ## 2.router
 the key of router---adding url by decorator<br>
-a way about redirect_to
+a way about redirect_to<br>
+common forms of url system<br>
