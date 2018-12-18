@@ -23,6 +23,14 @@ def index():
 def index2():
     return 'Hello World!'
 
+# 常用路由系统有以下五种
+'''
+@app.route('/user/<username>') 字符串
+@app.route('/post/<int:post_id>') 整数
+@app.route('/post/<float:post_id>') 小数
+@app.route('/post/<path:path>') 路径
+@app.route('/login', methods=['GET', 'POST'])
+'''
 
 if __name__ == '__main__':
     app.run()
