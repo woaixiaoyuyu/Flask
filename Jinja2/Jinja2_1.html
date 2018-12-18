@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jinja2_1</title>
+</head>
+<body>
+{#
+    标记print语句开头的字符串。默认为'{{'
+    标记print语句结尾的字符串。默认为 '}}'
+    标记注释开头的字符串。默认为'{#'
+    标记注释结尾的字符串。默认为你懂的，不写出来了，写了我就注释结束了
+#}
+    {{ index() }}<br />
+    {{ index2('xiaoyuyu') }}<br />
+{# |truncate 用来截断 #}
+    {{ index2('xiaoyuyu')|truncate(4, False, '**')}}<br />
+{# |safe 关闭HTML自动转义 #}
+    {{ index2('xiaoyuyu')|safe }}<br />
+    {{ index3('xiaoyuyu') }}<br />
+{#一个冷门的东西：宏定义#}
+    {% macro input(name, type='text', value='') %}
+        <input type="{{ type }}" name="{{ name }}" value="{{ value }}">
+        <input type="{{ type }}" name="{{ name }}" value="{{ value }}">
+        <input type="{{ type }}" name="{{ name }}" value="{{ value }}">
+    {% endmacro %}
+    {{ input('xiaoyuyu','text','n') }}
+</body>
+</html>
