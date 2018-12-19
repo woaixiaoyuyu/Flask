@@ -8,3 +8,7 @@ Making user login authentication base on before request<br>
 --login.html--<br>
 ## 2.@after request
 Focus on the execution sequence
+## 3.Customization error
+@app.errorhandler(404)<br>
+def error_404(*args):<br>
+    return "404!!!"<br>
