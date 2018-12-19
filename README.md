@@ -10,3 +10,4 @@ The way about making config file.<br>
 Some tips of router.
 ## 3.Jinja2
 ## 4.flash
+## 5.request_expand
