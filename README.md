@@ -9,3 +9,4 @@ It's my first step about Flask.<br>
 The way about making config file.<br>
 Some tips of router.
 ## 3.Jinja2
+## 4.flash
