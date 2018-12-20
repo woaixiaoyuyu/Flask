@@ -12,3 +12,13 @@ Focus on the execution sequence
 @app.errorhandler(404)<br>
 def error_404(*args):<br>
 &nbsp; &nbsp;&nbsp; &nbsp;return "404!!!"<br>
+## 4.Customization error
+@@app.add_template_global<br>
+def add(a,b):<br>
+&nbsp; &nbsp;&nbsp; &nbsp;return a+b<br><br><br>
+{{add(1,2}}
+## 5.Customization filter
+@app.add_template_filter<br>
+def db(a,b,c):<br>
+&nbsp; &nbsp;&nbsp; &nbsp;return a+b+c<br><br><br>
+{{1|(2,3)}}
