@@ -7,7 +7,7 @@ Making user login authentication base on before request<br>
 --index.html--<br>
 --login.html--<br>
 ## 2.@before first request
-execute at the first time
+Execute at the first time with only one chance
 ## 3.@after request
 Focus on the execution sequence
 ## 4.Customization error
