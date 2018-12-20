@@ -12,7 +12,7 @@ Focus on the execution sequence
 @app.errorhandler(404)<br>
 def error_404(*args):<br>
 &nbsp; &nbsp;&nbsp; &nbsp;return "404!!!"<br>
-## 4.Customization error
+## 4.Customization func
 @@app.add_template_global<br>
 def add(a,b):<br>
 &nbsp; &nbsp;&nbsp; &nbsp;return a+b<br><br><br>
