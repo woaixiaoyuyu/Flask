@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>用户登录</h1>
+<form method="POST">
+    <input type="text" name="user"/>
+    <input type="submit" value="提交"/>
+</form>
+
+{#<img src="/blue/static/1.jpg">#}
+
+<p><img src="{{ url_for('static',filename='1.jpg') }}"></p>
+{# 这种输出的是 http:// 开头的地址，但是，在https页面样式就会丢失 #}
+<img src="{{ url_for('static',filename='1.jpg') }}"><br />
+<img src="{{ url_for('static',filename='1.jpg') }}">
+
+</body>
+</html>
