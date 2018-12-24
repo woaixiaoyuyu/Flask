@@ -1,7 +1,5 @@
-from _thread import get_ident   # 获取线程的唯一标识
 # from flask import Flask
 import threading
-from greenlet import getcurrent as get_ident
 
 # 自定义一个支持协程的threading
 
@@ -11,13 +9,13 @@ from greenlet import getcurrent as get_ident
 # 2.支持协程
 # 增加协程的唯一标识，需要安装库gevent
 # import threading
-# try:
-#     from greenlet import getcurrent as get_ident # 协程
-# except ImportError:
-#     try:
-#         from thread import get_ident
-#     except ImportError:
-#         from _thread import get_ident # 线程
+try:
+    from greenlet import getcurrent as get_ident # 协程
+except ImportError:
+    try:
+        from thread import get_ident
+    except ImportError:
+        from _thread import get_ident # 线程
 
 
 class Local(object):
