@@ -4,3 +4,5 @@ work hard and study Flask
 An user-defined threading to realize the basic functions of threading
 ## 2.coroutine
 A little change to make the base support coroutine
+## 3.flask standard
+The way to build thread supporting coroutine through object-oriented
