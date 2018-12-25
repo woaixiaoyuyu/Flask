@@ -27,4 +27,4 @@ Request对象返还给RequestContext->RequestContext对象返还给Flask->Push �
 
 从LocalProxy调用->调用函数_lookup_req_object->从Local中取出RequestContext对象->拿出Request对象->还给print函数</pre>
 
-<img src="/detail.png" />
+<img src="/context_process/detail.png" />
