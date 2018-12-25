@@ -9,8 +9,8 @@ The way to build thread supporting coroutine through object-oriented
 ## 4.get request
 source code analysis<br><br>
 example:<br>
-@app.route('/')
-<pre>def hello_world():
+<pre>@app.route('/')
+def hello_world():
     print(request.method)
     return 'Hello World!'
 
