@@ -2,10 +2,13 @@
 
 # 1.__call__
 # 第一个实例化对象Flask
+'''将请求相关数据封装到RequestContext中'''
 # ctx = self.request_context(environ)
 #         error = None
 #         try:
 #             try:
+'''再将对象封装到Local中（每个线程/协程独立）'''
+'''使用request获取的信息'''
 #                 ctx.push()
 #                 response = self.full_dispatch_request()
 #             except Exception as e:
@@ -18,6 +21,7 @@
 #         finally:
 #             if self.should_ignore_error(error):
 #                 error = None
+'''清除自己在Local中保存的数据'''
 #             ctx.auto_pop(error)
 #
 #     def __call__(self, environ, start_response):
@@ -63,7 +67,7 @@
 # self._local.stack会调用Local中的setattr,最后压入请求相关的所有数据
 
 # 5.Local
-# 之前熟悉的__storage__', '__ident_func__
+# 之前熟悉的'__storage__', '__ident_func__'
 
 from flask import Flask
 
@@ -78,3 +82,4 @@ def hello_world():
 if __name__ == '__main__':
     app.__call__
     app.run()
+
