@@ -1,5 +1,5 @@
 ### A basic project structure
-<pre
+<pre>
 |-flasky
   |-app/
     |-templates/
@@ -20,4 +20,4 @@
   |-requirements.txt
   |-config.py
   |-flasky.py
-/pre>
+</pre>
