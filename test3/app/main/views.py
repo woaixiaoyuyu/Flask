@@ -20,7 +20,7 @@ def index():
             db.session.commit()
             session['known'] = False
             # if current_app.config['FLASKY_ADMIN']:
-            send_email('519902366@qq.com', 'New User', 'mail/new_user', user=user)
+            send_email('*********@qq.com', 'New User', 'mail/new_user', user=user)
         else:
             session['known'] = True
         session['name'] = form.name.data
