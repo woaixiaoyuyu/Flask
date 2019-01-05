@@ -4,10 +4,10 @@ class Config:
     MAIL_SERVER = 'smtp.qq.com'
     MALT_PORT = 465  # 465 or 587
     MAIL_USE_TLS = True
-    MAIL_USERNAME = '519902366@qq.com'
-    MAIL_PASSWORD = 'khpvupznqlqmbiad'
-    FLASKY_ADMIN = '519902366@qq.com'  # this is the email of admin
-    FLASKY_MAIL_SENDER = '519902366@qq.com'  # this is sender
+    MAIL_USERNAME = '*********@qq.com'
+    MAIL_PASSWORD = '******************'
+    FLASKY_ADMIN = '*********@qq.com'  # this is the email of admin
+    FLASKY_MAIL_SENDER = '*********@qq.com'  # this is sender
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'  # 只是在主题前面加个修饰前缀
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
@@ -20,16 +20,16 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:xiaoyuyu@localhost/flask'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:*********@localhost/flask'
 
 
 class TestingConfig(Config):
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:xiaoyuyu@localhost/flask_test'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:*********@localhost/flask_test'
 
 
 class ProductionCongfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:xiaoyuyu@localhost/flask'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:*********@localhost/flask'
 
 
 config = {
