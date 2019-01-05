@@ -1,0 +1,55 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block head %}
+{{ super() }}
+    {# 标签栏 #}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='bitbug_favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='bitbug_favicon.ico') }}" type="image/x-icon">
+{% endblock %}
+
+{% block navbar %}
+{#向上面的元素添加 role="navigation"，有助于增加可访问性#}
+{#创建一个带有黑色背景白色文本的反色的导航栏，只需要简单地向 .navbar class 添加 .navbar-inverse class 即可#}
+<div class="navbar navbar-inverse" role="navigation">
+    {#<div class="container">...</div> 元素被添加，确保居中和最大宽度#}
+    <div class="container">
+        {#向 <div> 元素添加一个标题 class .navbar-header，内部包含了带有 class navbar-brand 的 <a> 元素的文本大一号#}
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navvar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Flasky</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            {#为了向导航栏添加链接，只需要简单地添加带有 class .nav、.navbar-nav 的无序列表即可#}
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    {% for message in get_flashed_messages() %}
+    {# alert配合data-dismiss:alert :警告框可以取消掉#}
+    {# alert-warning :增加警告框底色黄色#}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+        {% block page_content %}{% endblock %}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
+{% endblock %}
